@@ -11,7 +11,7 @@ then
         exit 1
     else
         client=`psql postgres -A -t -c "SELECT client_addr from pg_stat_replication;"`
-        client=`dig -x $client +short`
+        # client=`dig -x $client +short`
     fi
 fi
 
